@@ -1,0 +1,75 @@
+/* === ESTILO GLOBAL FOTOGRÁFICO === */
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+/* === CUADRO COMO FOTO DESTACADA ANIMADA === */
+.cuadro {
+  width: 150px;
+  height: 150px;
+  background-image: url('https://source.unsplash.com/random/300x300?nature');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  animation-name: rebote;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/* Animación rebote para el cuadro */
+@keyframes rebote {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* === BOTÓN ESTILIZADO PARA CONTACTO === */
+.boton {
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.boton:hover {
+  background-color: #444;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* === TARJETA COMO DESCRIPCIÓN DEL FOTÓGRAFO === */
+.tarjeta {
+  margin: 40px auto 0;
+  width: 250px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  font-size: 18px;
+  font-style: italic;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.tarjeta:hover {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+/* 
+  -webkit- y -moz- aseguran que la rotación funcione también en navegadores antiguos 
+  como versiones anteriores de Chrome y Firefox.
+*/
